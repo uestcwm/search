@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+  '''
+   冒泡排序
+   多次遍历，遍历总次数：n-1
+  '''
+def bubblesort(seq):
+    for i in range(len(seq)):
+        for j in range(len(seq) - 1, i, -1):
+            if seq[j] < seq[j - 1]:
+                seq[j - 1], seq[j] = seq[j], seq[j - 1]
+    return seq
+
+s = [4, 6, 2, 5, 7, 9, 8, 1]
+bubblesort(s)
+print(s)
