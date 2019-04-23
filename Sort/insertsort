@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+"""
+        插入排序
+        由于其内层循环非常紧凑，对于小规模的输入，
+        插入排序是一种非常快的原址排序算法
+        注： 如果输入数组中仅有常数个元素需要在排序过程中存储在数组外，
+            则称这种排序算法是原址的。
+"""
+
+def insertsort(seq):
+    for index in range(1, len(seq)):
+        currentvalue = seq[index]
+        pos = index
+        while pos > 0 and seq[pos-1] > currentvalue:
+            seq[pos] = seq[pos-1]
+            pos -= 1
+        seq[pos] = currentvalue
+    return seq
+
+seq = [5, 2, 4, 6, 1, 3]
+insertsort(seq)
+print(seq)
