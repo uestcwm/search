@@ -1,4 +1,4 @@
-def binary_search(list,item):
+def binary_search(list,item): #二分查找
     low=0
     high=len(list)-1
 
