@@ -16,7 +16,7 @@ def countsort( A, d ):  #A待排数组， d位数 如果位置需要先修改一
 
 from random import randint
 a = [randint(1,999) for i in range(10)]  #产生10个随机3位数
-a = RadixSort(a,3)
+a = countsort(a,3)
 print(a)
 
 [181, 263, 893, 705, 566, 727, 801, 310, 589, 783]  #随机数
